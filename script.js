@@ -364,7 +364,7 @@ document.body.onclick = function(e) {
 
 // Setting background slider
 let img_slide = document.querySelector('.img-slide'),
-    images = ['img/pawel-czerwinski--0xCCPIbl3M-unsplash.jpg', 'img/htoel ipad.jpg', 'img/khtna.jpg', 'img/phot.jpg', 'img/kelsey-curtis--27u_GzlAFw-unsplash.jpg'],
+    images = ['pawel-czerwinski--0xCCPIbl3M-unsplash.jpg', 'htoel ipad.jpg', 'khtna.jpg', 'phot.jpg', 'kelsey-curtis--27u_GzlAFw-unsplash.jpg'],
     sliderCount = 0;
 
 setInterval( () => {
