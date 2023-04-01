@@ -4,79 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDOX.R</title>
+    <metta name="description"  content="Lorem ipsum ">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,300;1,100;1,200;1,400;1,600;1,800&family=Itim&family=Julius+Sans+One&family=Poppins:ital,wght@0,100;0,500;0,600;0,800;1,100;1,200;1,300;1,500&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/3fe6853425.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
+    <script src="translate.js" defer></script>
 </head>
 <body>
-
-<div class="cursor"></div>
-
-<!-- popup -->
-<div class="popUp_overlay">
-    <div class="message">
-        <button class="fa">OK</button>
-        <h2>The theme is in the current theme color. If pleased, pick up the desired color below</h2>
+    
+    <div class="cursor"></div>
+    
+    <!-- popup -->
+    <div class="popUp_overlay">
+        <div class="message">
+            <button class="fa">OK</button>
+            <h2 germanEle data-german="Haus trabns">The theme is in the current theme color. If pleased, pick up the desired color below</h2>
+        </div>
     </div>
-</div>
 
-<!-- settings -->
-<i class="fa-solid fa-gear settings-button"></i>
-
-<div class="settings">
-    <div class="color" id="color1" data-color="#d4006a"></div>
-    <div class="color" id="color2" data-color="#029760"></div>
-    <div class="color" id="color3" data-color="#9309b9"></div>
-    <div class="color" id="color4" data-color="#1d1d1d"></div>
-    <div class="color" id="color5" data-color="#63680c"></div>
-    <div class="color" id="color6" data-color="#b74011"></div>
-    <div class="color" id="color7" data-color="#ff4500"></div>
-    <span class="none color" id="color8" data-color="#0075ff">Default</span>
-    <label for="colorInput">Chose color</label>
-    <input type="color" name="colorInput" class="color" id="colorInput">
+    <!-- settings -->
+    <i class="fa-solid fa-gear settings-button"></i>
+    
+    <div class="settings">
+        <div class="color" id="color1" data-color="#d4006a"></div>
+        <div class="color" id="color2" data-color="#029760"></div>
+        <div class="color" id="color3" data-color="#9309b9"></div>
+        <div class="color" id="color4" data-color="#1d1d1d"></div>
+        <div class="color" id="color5" data-color="#63680c"></div>
+        <div class="color" id="color6" data-color="#b74011"></div>
+        <div class="color" id="color7" data-color="#ff4500"></div>
+        <span class="none color" id="color8" data-color="#0075ff">Default</span>
+        <label for="colorInput" germanEle data-german="Haus trabns">Chose color</label>
+        <input type="color" name="colorInput" class="color" id="colorInput">
+        <select name="" id="select" class="select">
+            <option value="english">English</option>
+            <option value="german" selected>German</option>
+        </select>
 </div>
 <!-- load line -->
 <div class="load-line theme-bg-color"></div>
 
 <i class="fa-solid fa-arrow-up scroll_up_arrow"></i>
 <button class="copyBtn"></button>
-    
+
 <div class="header" id="home">
     <div class="overlay-wrapper">
         <div class="overlay"></div>
         <img src="kelsey-curtis--27u_GzlAFw-unsplash.jpg" class="img-slide" alt="">
     </div>
-
+    
     <header>
         <a href="index.html"><h2>REDOX<span>.</span>R</h2></a>
-
+        
         <ul class="links">
             <i class="fa fa-times"></i>
-            <li><a href="#home" class="nva_link active link0">Home</a></li>
-            <li><a href="#about" class="nva_link link1">About</a></li>
-            <li><a href="#skills" class="nva_link link2">Skills</a></li>
-            <li><a href="#education" class="nva_link link3">Education</a></li>
-            <li><a href="#slider" class="nva_link link4">Slider</a></li>
-            <li><a href="resume.html" class="nva_link link5">Resume</a></li>
-            <li><a href="#contact" class="nva_link link6">Contact</a></li>
-            <a href="legaldocs.html"><button class="nva_link legalDocs">Legal docs</button>
+            <li><a href="#home" class="nva_link active link0" germanEle data-german="Haus" englishEle data-english="Home">Home</a></li>
+            <li><a href="#about" class="nva_link link1" germanEle data-german="Über mich" englishEle data-english="About">About</a></li>
+            <li><a href="#skills" class="nva_link link2" germanEle data-german="Fähigkeiten" englishEle data-english="Skills">Skills</a></li>
+            <li><a href="#education" class="nva_link link3" germanEle data-german="Bildung" englishEle data-english="Education">Education</a></li>
+            <li><a href="#slider" class="nva_link link4" germanEle data-german="Schieberegler" englishEle data-english="Slider">Slider</a></li>
+            <li><a href="resume.html" class="nva_link link5" germanEle data-german="Fortsetzen" englishEle data-english="Resume">Resume</a></li>
+            <li><a href="#contact" class="nva_link link6" germanEle data-german="Kontakt" englishEle data-english="Contact">Contact</a></li>
+            <a href="legaldocs.html"><button class="nva_link legalDocs" germanEle data-german="Rechtliche Dokumente" englishEle data-english="Legal docs">Legal docs</button>
             </a>
         </ul>
-
+        
         <i class="fa fa-bars"></i>
     </header>
-
+    
     <div class="intro">
         <div class="info">
             <h1>LOREM IPSUM</h1>
-            <p>Frontend developer</p>
+            <p class="job" germanEle data-german="Haus trabns">Frontend developer</p>
+            <p class="purpose" germanEle data-german="Haus trabns">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto magni eligendi dignissimos esse fugit natus debitis, quod iste exercitationem libero neque sed at, sit inventore </p>
             <button class="scroll_btn"><i class="fa-solid fa-angles-down fa-bounce"></i></button>
         </div>
         <div class="img">
-            <img src="rc-cf-FMh5o5m5N9E-unsplash-removebg-preview.png" alt="">
-            <h1>Lorem, ipsum dolor.</h1>
+            
         </div>
     </div>
     
@@ -85,25 +92,25 @@
 
 
 <div class="about" id="about">
-    <h1>About</h1>
+    <h1 germanEle data-german="Haus trabns">About</h1>
     <div class="about-wrapper">
         <div class="about-img-wrapper">
             <img src="rc-cf-FMh5o5m5N9E-unsplash-removebg-preview.png" alt="">
         </div>
-
+        
         <div class="about-info">
             <div class="general-info">
-                <h2>About me</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, iusto. Quaerat aut maxime dolores iste dolor!</p>
+                <h2 germanEle data-german="Haus trabns">About me</h2>
+                <p germanEle data-german="Haus trabns">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, iusto. Quaerat aut maxime dolores iste dolor!</p>
             </div>
             <div class="personal-info">
-                <h2>personal information</h2>
+                <h2 germanEle data-german="Haus trabns">personal information</h2>
                 <div class="my-info">
-                    <p>Name: <span>LOREM IPSUM DOLOR</span></p>
-                    <p>Age: <span>23</span></p>
-                    <p>Address: <span>some where in the universe</span></p>
-                    <p>Mail: <span>name@example.com</span></p>
-                    <p>Phone: <span>+212423456678</span></p>
+                    <p germanEle data-german="Haus trabns">Name: <span>LOREM IPSUM DOLOR</span></p>
+                    <p germanEle data-german="Haus trabns">Age: <span>23</span></p>
+                    <p germanEle data-german="Haus trabns">Address: <span>some where in the universe</span></p>
+                    <p germanEle data-german="Haus trabns">Mail: <span>name@example.com</span></p>
+                    <p germanEle data-german="Haus trabns">Phone: <span>+212423456678</span></p>
                     <a href="pdf.pdf" target="_blank" download><button class="intro-download-btn">Download cv <i class="fa-solid fa-download"></i></button></a>
                     <a href="pdf.pdf" target="_blank"><button class="intro-view-btn">View cv <i class="fa fa-arrow-trend-up"></i></button></a>
                 </div>
@@ -117,21 +124,21 @@
 
 <div class="paralax">
     <div class="paralax-overlay">
-        <h1>this is a text</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam porro reprehenderit impedit aperiam nihil. Illum dolorum pariatur ea a eaque voluptatum fugiat ut maiores error molestias. Expedita, officia dolore.</p>
-        <button>Let's talk <a href="#contact">Let's talk</a></button>
+        <h1 germanEle data-german="Haus trabns">this is a text</h1>
+        <p germanEle data-german="Haus trabns">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam porro reprehenderit impedit aperiam nihil. Illum dolorum pariatur ea a eaque voluptatum fugiat ut maiores error molestias. Expedita, officia dolore.</p>
+        <button germanEle data-german="Haus trabns">Let's talk <a href="#contact" germanEle data-german="Haus trabns">Let's talk</a></button>
     </div>
 </div>
 
 
 
 <div class="skills-and-langauges" id="skills">
-    <h1>Skills and Languages</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, eius!</p>
-
-   <div class="skills-wrapper">
+    <h1 germanEle data-german="Haus trabns">Skills and Languages</h1>
+    <p germanEle data-german="Haus trabns">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, eius!</p>
+    
+    <div class="skills-wrapper">
         <div class="dev-langs">
-            <h2>Tech skills</h2>
+            <h2 germanEle data-german="Haus trabns">Tech skills</h2>
             <div class="langs">
                 <p>html</p>
                 <div class="level">
@@ -167,26 +174,26 @@
             <div class="lang" data-rotation="70" title="English Level. click to download the diploma">
                 <p><span class="level" data-number="85">0</span>%</p>
                 <span class="inner_circle"></span>
-                <h6>English</h6>
+                <h6 germanEle data-german="Haus trabns">English</h6>
                 <a href="pdf.pdf" target="_blank" download></a>
             </div>
             <div class="lang" data-rotation="50" title="German Level. click to download the diploma">
                 <p><span class="level"  data-number="60">0</span>%</p>
                 <span class="inner_circle"></span>
-                <h6>German</h6>
+                <h6 germanEle data-german="Haus trabns">German</h6>
                 <a href="pdf.pdf" target="_blank" download></a>
             </div>
             <div class="lang" data-rotation="60" title="Arabic Level (Native). click to download the diploma">
                 <p><span class="level"  data-number="100">0</span>%</p>
                 <span class="inner_circle"></span>
-                <h6>Arabic</h6>
+                <h6 germanEle data-german="Haus trabns">Arabic</h6>
                 <a href="pdf.pdf" target="_blank" download></a>
             </div>
             <div class="lang" data-rotation="90" title="French Level. click to download the diploma">
                 <p><span class="level">0</span>%</p>
                 <span class="inner_circle"></span>
                 <a href="pdf.pdf" target="_blank" download></a>
-                <h6>French</h6>
+                <h6 germanEle data-german="Haus trabns">French</h6>
             </div>
         </div>
     </div>
@@ -194,17 +201,17 @@
 
 
 <div class="education" id="education">
-    <h1>Education</h1>
-
+    <h1 germanEle data-german="Haus trabns">Education</h1>
+    
     <div class="education-wrapper">
         <div class="phase">
             <p class="year">2019</p>
             <div class="info">
                 <i class="fa-solid fa-graduation-cap"></i>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis sit dolore asperiores distinctio, itaque quae cort.</p>
+                <p germanEle data-german="Haus trabns">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis sit dolore asperiores distinctio, itaque quae cort.</p>
                 <div class="btns">
-                    <button class="download-diploma"><a href="pdf.pdf" target="_blank" download>Download diploma </a></button>
-                    <button class="view-diploma"><a href="pdf.pdf" target="_blank">View diploma</a></button>
+                    <button class="download-diploma"><a href="pdf.pdf" target="_blank" download germanEle data-german="Haus trabns">Download diploma </a></button>
+                    <button class="view-diploma"><a href="pdf.pdf" target="_blank" germanEle data-german="Haus trabns">View diploma</a></button>
                 </div>
             </div>
         </div>
@@ -212,10 +219,10 @@
             <p class="year">2019</p>
             <div class="info">
                 <i class="fa-solid fa-graduation-cap"></i>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis sit dolore asperiores distinctio, itaque quae cort.</p>
+                <p germanEle data-german="Haus trabns">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis sit dolore asperiores distinctio, itaque quae cort.</p>
                 <div class="btns">
-                    <button class="download-diploma"><a href="pdf.pdf" target="_blank" download>Download diploma </a></button>
-                    <button class="view-diploma"><a href="pdf.pdf" target="_blank">View diploma</a></button>
+                    <button class="download-diploma"><a href="pdf.pdf" target="_blank" download germanEle data-german="Haus trabns">Download diploma </a></button>
+                    <button class="view-diploma"><a href="pdf.pdf" target="_blank" germanEle data-german="Haus trabns">View diploma</a></button>
                 </div>
             </div>
         </div>
@@ -225,58 +232,58 @@
 
 
 <div class="silder-container" id="slider">
-    <h1>A glimpse of what we did</h1>
+    <h1 germanEle data-german="Haus trabns">A glimpse of what we did</h1>
     <div class="slider">
-    
+        
         <div class="slider-wrapper">
             <div class="overlay"></div>
             <div class="slide active ">
                 <img src="pawel-czerwinski--0xCCPIbl3M-unsplash.jpg" alt="">
                 <div class="info">
-                    <h2>slider heading one</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti temporibus amet optio perferendis recusandae delectus esse.</p>
+                    <h2 germanEle data-german="Haus trabns">slider heading one</h2>
+                    <p germanEle data-german="Haus trabns">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti temporibus amet optio perferendis recusandae delectus esse.</p>
                 </div>
             </div>
             <div class="slide">
                 <img src="pawel-czerwinski--0xCCPIbl3M-unsplash.jpg" alt="">
                 <div class="info">
-                    <h2>slider heading two</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti temporibus amet optio perferendis recusandae delectus esse.</p>
+                    <h2 germanEle data-german="Haus trabns">slider heading two</h2>
+                    <p germanEle data-german="Haus trabns">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti temporibus amet optio perferendis recusandae delectus esse.</p>
                 </div>
             </div>
             <div class="slide">
                 <img src="pawel-czerwinski--0xCCPIbl3M-unsplash.jpg" alt="">
                 <div class="info">
-                    <h2>slider heading three</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti temporibus amet optio perferendis recusandae delectus esse.</p>
+                    <h2 germanEle data-german="Haus trabns">slider heading three</h2>
+                    <p germanEle data-german="Haus trabns">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti temporibus amet optio perferendis recusandae delectus esse.</p>
                 </div>
             </div>
             <div class="slide">
                 <img src="pawel-czerwinski--0xCCPIbl3M-unsplash.jpg" alt="">
                 <div class="info">
-                    <h2>slider heading four</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti temporibus amet optio perferendis recusandae delectus esse.</p>
+                    <h2 germanEle data-german="Haus trabns">slider heading four</h2>
+                    <p germanEle data-german="Haus trabns">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti temporibus amet optio perferendis recusandae delectus esse.</p>
                 </div>
             </div>
             <div class="slide">
                 <img src="pawel-czerwinski--0xCCPIbl3M-unsplash.jpg" alt="">
                 <div class="info">
-                    <h2>slider heading five</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti temporibus amet optio perferendis recusandae delectus esse.</p>
+                    <h2 germanEle data-german="Haus trabns">slider heading five</h2>
+                    <p germanEle data-german="Haus trabns">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti temporibus amet optio perferendis recusandae delectus esse.</p>
                 </div>
             </div>
             <div class="slide">
                 <img src="pawel-czerwinski--0xCCPIbl3M-unsplash.jpg" alt="">
                 <div class="info">
-                    <h2>slider heading six</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti temporibus amet optio perferendis recusandae delectus esse.</p>
+                    <h2 germanEle data-german="Haus trabns">slider heading six</h2>
+                    <p germanEle data-german="Haus trabns">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti temporibus amet optio perferendis recusandae delectus esse.</p>
                 </div>
             </div>
             <div class="slide">
                 <img src="pawel-czerwinski--0xCCPIbl3M-unsplash.jpg" alt="">
                 <div class="info">
-                    <h2>slider heading seven</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti temporibus amet optio perferendis recusandae delectus esse.</p>
+                    <h2 germanEle data-german="Haus trabns">slider heading seven</h2>
+                    <p germanEle data-german="Haus trabns">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti temporibus amet optio perferendis recusandae delectus esse.</p>
                 </div>
             </div>
             <div class="navigation">
@@ -295,31 +302,31 @@
 
 
 <div class="contact" id="contact">
-
-    <h1>Contact</h1>
+    
+    <h1 germanEle data-german="Haus trabns">Contact</h1>
     <div class="sections-wrapper">
         <form action="https://formsubmit.co/06610840adce07310711e99e4bf1d83d" method="POST">
             <div class="field">
-                <label for="name">Name</label>
+                <label for="name" germanEle data-german="Haus trabns">Name</label>
                 <input type="text" name="" id="name" placeholder="Name" class="input">
             </div>
             <div class="field">
-                <label for="subject">Subject</label>
+                <label for="subject" germanEle data-german="Haus trabns">Subject</label>
                 <input type="text" name="" id="subject" placeholder="Subject" class="input">
             </div>
             <div class="field">
-                <label for="mail">E-mail</label>
+                <label for="mail" germanEle data-german="Haus trabns">E-mail</label>
                 <input type="mail" name="" id="mail" placeholder="E-mail" class="input">
             </div>
             <div class="field">
-                <label for="message">Message</label>
+                <label for="message" germanEle data-german="Haus trabns">Message</label>
                 <textarea name="" id="message" cols="30" rows="10" placeholder="Message" class="input"></textarea>
             </div>
             <p class="validation_output"></p>
             <div class="field">
                 <input type="submit" class="submitBtn" value="Send ➣">
             </div>
-    
+            
         </form>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26460.133814669938!2d-6.546478564216116!3d34.00494498635498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda749acfa1bfe09%3A0x81a014d3f361420!2sSidi%20Allal%20el%20Bahraoui!5e0!3m2!1sen!2sma!4v1679469977624!5m2!1sen!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>

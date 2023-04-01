@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/3fe6853425.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="legalDocs.css">
     <script src="legalDocs.js" defer></script>
+    <script src="translate.js" defer></script>
 </head>
 <body>
 
@@ -27,6 +28,10 @@
     <span class="none color" id="color8" data-color="#0075ff">Default</span>
     <label for="colorInput">Chose color</label>
     <input type="color" name="colorInput" class="color" id="colorInput">
+    <select name="" id="select" class="select">
+        <option value="english">English</option>
+        <option value="german">German</option>
+    </select>
 </div>
 
 <!-- load line -->
@@ -43,7 +48,7 @@
 </header>
 
 <!--  indicator -->
-<p class="indicator"><a href="index.html" class="theme-color">Home </a> > Legal Docs</p>
+<p class="indicator"><a href="index.html" class="theme-color" germanEle data-german="Haus" englishEle data-english="Home">Home </a> > Legal Docs</p>
 <i class="fa fa-arrow-left theme-color"></i>
 
 

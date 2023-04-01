@@ -110,7 +110,7 @@ if (localStorage.getItem('current-color')) {
 // Hide color theme settings of click outside
 document.body.addEventListener('click', (e) => {
     let tar = e.target
-    if (!tar.classList.contains('settings-button') && !tar.classList.contains('color') && !tar.classList.contains('settings') && !tar.classList.contains('fa-settings')) {
+    if (!tar.classList.contains('settings-button') && !tar.classList.contains('color') && !tar.classList.contains('settings') && !tar.classList.contains('fa-settings') && !tar.classList.contains('select')) {
         settings.classList.remove('show-settings')
     }
 })
