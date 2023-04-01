@@ -163,7 +163,6 @@ window.addEventListener('scroll', () => {
             let rotateDegree = ele.dataset.rotation
 
             let h6 = ele.querySelector('.level')
-            console.log(h6)
             
             if (!rotationStarted) {
                 let intervall = setInterval(() => {
@@ -270,7 +269,7 @@ settings_button.addEventListener('click', () => {
 
 document.body.addEventListener('click', (e) => {
     let tar = e.target
-    if (!tar.classList.contains('settings-button') && !tar.classList.contains('color') && !tar.classList.contains('settings') && !tar.classList.contains('fa-settings')) {
+    if (!tar.classList.contains('settings-button') && !tar.classList.contains('color') && !tar.classList.contains('settings') && !tar.classList.contains('fa-settings') && !tar.classList.contains('select')) {
         settings.classList.remove('show-settings')
     }
 })
@@ -322,7 +321,7 @@ if (localStorage.getItem('current-color')) {
 // Hide color theme settings of click outside
 document.body.addEventListener('click', (e) => {
     let tar = e.target
-    if (!tar.classList.contains('settings-button') && !tar.classList.contains('color') && !tar.classList.contains('settings') && !tar.classList.contains('fa-settings')) {
+    if (!tar.classList.contains('settings-button') && !tar.classList.contains('color') && !tar.classList.contains('settings') && !tar.classList.contains('fa-settings') && !tar.classList.contains('select')) {
         settings.classList.remove('show-settings')
     }
 })
@@ -382,22 +381,3 @@ setInterval( () => {
 }, 8000)
 
 
-
-let cursor = document.querySelector('.cursor');
-
-window.addEventListener('mousemove', (e) => {
-    let x = e.clientX
-    let y = e.clientY
-    cursor.style.left = (x - 15) + 'px';
-    cursor.style.top = (y - 15) + 'px';
-})
-
-window.addEventListener('click', (e) => {
-    cursor.style.display = 'block';
-    // cursor.classList.add('style');
-    
-    setInterval(() => {
-        cursor.classList.remove('style');
-        cursor.style.display = 'none';
-    }, 200)
-})
