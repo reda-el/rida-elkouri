@@ -150,7 +150,6 @@ html::-webkit-scrollbar-track {
   color: white;
   padding: 4px 7px;
   border-radius: 4px;
-  font-family: "Inter", sans-serif;
 }
 .header header ul li a.active {
   background-color: rgb(255, 255, 255);
@@ -510,7 +509,7 @@ html::-webkit-scrollbar-track {
   margin-top: 10px;
 }
 .paralax .paralax-overlay button {
-  width: 140px;
+  padding: 0 20px;
   height: 40px;
   margin-top: 20px;
   color: white;
@@ -1224,7 +1223,6 @@ footer p i {
   margin-left: 6px;
 }
 .settings select {
-  width: 100px;
   margin-left: 6px;
   height: 26px;
 }
