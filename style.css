@@ -148,8 +148,9 @@ html::-webkit-scrollbar-track {
 .header header ul li a {
   text-decoration: none;
   color: white;
-  padding: 4px 10px;
+  padding: 4px 7px;
   border-radius: 4px;
+  font-family: "Inter", sans-serif;
 }
 .header header ul li a.active {
   background-color: rgb(255, 255, 255);
@@ -249,7 +250,7 @@ html::-webkit-scrollbar-track {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(/rc-cf-FMh5o5m5N9E-unsplash-removebg-preview.png);
+  background-image: url(rc-cf-FMh5o5m5N9E-unsplash-removebg-preview.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1059,6 +1060,9 @@ footer p i {
   transform: scale(0);
   opacity: 0;
   transition: all 0.5s ease-in;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: -15px 17px 17px rgba(0, 0, 0, 0.1);
 }
 .popUp_overlay.show_popup {
   transform: scale(1);
@@ -1075,12 +1079,12 @@ footer p i {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 40px;
   border-radius: 10px;
 }
 .popUp_overlay .message h2 {
-  color: rgb(255, 255, 255);
+  color: rgb(87, 87, 87);
   text-align: center;
 }
 .popUp_overlay .message .fa {
@@ -1089,7 +1093,7 @@ footer p i {
   right: 4px;
   color: rgb(0, 0, 0);
   cursor: pointer;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(188, 188, 188);
   padding: 6px;
   border: none;
   outline: none;
@@ -1097,7 +1101,7 @@ footer p i {
   border-radius: 2px;
 }
 .popUp_overlay .message .fa:hover {
-  background-color: rgb(214, 214, 214);
+  background-color: rgb(160, 160, 160);
 }
 
 @media only screen and (max-width: 768px) {
