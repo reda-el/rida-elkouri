@@ -107,7 +107,6 @@ body {
   margin-left: 6px;
 }
 .settings select {
-  width: 100px;
   margin-left: 6px;
   height: 26px;
 }
@@ -123,8 +122,12 @@ body {
     border-radius: 5px;
     z-index: 11;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     transition: all 1s;
+  }
+  .settings.show-settings {
+    width: 90px;
   }
   .settings div {
     margin: 2px 0;
@@ -132,13 +135,17 @@ body {
   .settings .none {
     margin: 0 6px;
     padding: 1px 2px;
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 4px;
   }
   .settings label {
     font-size: 14px;
     text-align: center;
     margin-top: 4px;
+  }
+  .settings select, .settings input {
+    margin-top: 7px;
+    width: 99%;
   }
 }
 .load-line {
@@ -148,18 +155,38 @@ body {
   position: absolute;
   z-index: 1111;
   transition: all 1s ease-in;
+  animation: load-line-animation 1s ease;
 }
 .load-line.load-line-style {
   width: 100%;
 }
 
+@keyframes load-line-animation {
+  0% {
+    background-color: var(--main-color);
+  }
+  25% {
+    background-color: #d4006a;
+  }
+  50% {
+    background-color: #0075ff;
+  }
+  75% {
+    background-color: #d9ff00;
+  }
+  10% {
+    background-color: #00ed47;
+  }
+}
 .copyBtn {
   position: fixed;
   top: -40px;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--main-color);
-  width: 140px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 20px;
   height: 44px;
   border: none;
   outline: none;
@@ -192,11 +219,6 @@ body {
   opacity: 0.9;
 }
 
-p {
-  font-family: "Inter", sans-serif;
-  font-size: 17px;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -212,6 +234,11 @@ html::-webkit-scrollbar-thumb {
 
 html::-webkit-scrollbar-track {
   background: #d3d3d3;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
 }
 
 header {
@@ -301,7 +328,7 @@ header a i {
   background-color: var(--main-color);
   border-radius: 4px 0 0 4px;
 }
-.docs-wrraper .docs .doc h2 {
+.docs-wrraper .docs .doc h3 {
   color: rgb(72, 72, 72);
 }
 .docs-wrraper .docs .doc p {
@@ -350,7 +377,8 @@ header a i {
 .docs-wrraper .allDocs {
   width: 100%;
   background-color: white;
-  height: 100px;
+  height: -moz-fit-content;
+  height: fit-content;
   grid-column: span 2;
   padding: 10px;
   border-radius: 4px;
@@ -375,8 +403,8 @@ header a i {
   background-color: var(--main-color);
   border-radius: 4px 0 0 4px;
 }
-.docs-wrraper .allDocs h4 {
-  color: #393939;
+.docs-wrraper .allDocs h5 {
+  color: rgb(72, 72, 72);
   text-align: center;
 }
 .docs-wrraper .allDocs a button {
@@ -406,7 +434,7 @@ header a i {
     margin-top: 16px;
     padding: 10px 10px 10px 20px;
   }
-  .docs-wrraper .docs .doc h2 {
+  .docs-wrraper .docs .doc h3 {
     font-size: 20px;
   }
   .docs-wrraper .allDocs {
@@ -415,7 +443,7 @@ header a i {
   }
 }
 @media only screen and (max-width: 400px) {
-  .docs-wrraper .docs .doc h2 {
+  .docs-wrraper .docs .doc h3 {
     font-size: 22px;
   }
   .docs-wrraper .docs .doc p {

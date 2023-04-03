@@ -43,3 +43,6 @@ if (localStorage.getItem('language') === 'english') {
     select.selectedIndex = 0
 }
 
+
+
+

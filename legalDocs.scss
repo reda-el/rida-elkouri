@@ -14,63 +14,10 @@ body {
 }
 
 @import 'scss/settings';
-
-
-.load-line {
-    height: 4px;
-    background-color: var(--main-color);
-    width: 0;
-    position: absolute;
-    z-index: 1111;
-    transition: all 1s ease-in;
-
-    &.load-line-style {
-        width: 100%;
-    }
-}
-
-.copyBtn {
-	position: fixed;
-	top: -40px;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: var(--main-color);
-	width: 140px;
-	height: 44px;
-	border: none;
-	outline: none;
-	border-radius: 20px;
-	z-index: 111;
-	color: rgb(255, 255, 255);
-	font-weight: bold;
-	transition: top 0.3s ease;
-
-	&.showCopyBtn {
-		top: 30px;
-	}
-}
-
-
-.scroll_up_arrow {
-	position: fixed;
-	right: -40px;
-	bottom: 14px;
-	background-color: var(--main-color);
-	color: white;
-	z-index: 3;
-	padding: 9px 10px;
-	cursor: pointer;
-	transition: right 0.4s ease-in;
-
-	&.scroll_up_arrow_show {
-		right: 14px;
-	}
-
-	&:hover {
-        outline: 1px solid var(--main-color);
-        opacity: 0.9;
-    }
-}
+@import 'scss/loadLine';
+@import 'scss/copypasteBtn';
+@import 'scss/scrollArrow';
+@import 'scss/scrollBarDefaultStyles';
 
 
 p {
@@ -78,22 +25,6 @@ p {
 	font-size: 17px;
 }
 
-html {
-	scroll-behavior: smooth;
-}
-
-html::-webkit-scrollbar {
-	width: 10px;
-}
-
-html::-webkit-scrollbar-thumb {
-	border-radius: 4px;
-	background: var(--main-color);
-}
-
-html::-webkit-scrollbar-track {
-	background: #d3d3d3;	
-}
 
 
 header {
@@ -195,7 +126,7 @@ header {
                 border-radius: 4px 0 0 4px;
             }
 
-            h2 {
+            h3 {
                 color: rgb(72, 72, 72);
             }
 
@@ -257,7 +188,7 @@ header {
     .allDocs {
         width: 100%;
         background-color: white;
-        height: 100px;
+        height: fit-content;
         grid-column: span 2;
         padding: 10px;
         border-radius: 4px;
@@ -285,8 +216,8 @@ header {
             border-radius: 4px 0 0 4px;
         }
 
-        h4 {
-            color: #393939;
+        h5 {
+            color: rgb(72, 72, 72);
             text-align: center;
         }
 
@@ -322,7 +253,7 @@ header {
                 margin-top: 16px;
                 padding: 10px 10px 10px 20px;
 
-                h2 {
+                h3 {
                     font-size: 20px;
                 }
             }
@@ -340,7 +271,7 @@ header {
     .docs-wrraper {
         .docs {
             .doc {
-                h2 {
+                h3 {
                     font-size: 22px;
                 }
 
@@ -359,6 +290,5 @@ header {
 
 
 
-// ####### contact
 @import 'scss/contact';
 @import 'scss/footer';

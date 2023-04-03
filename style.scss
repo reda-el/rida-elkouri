@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0%;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #f2f2f2;
+}
+
+:root {
+	--main-color: #0075ff;
+}
+
+p {
+	font-family: 'Inter', sans-serif;
+	font-size: 17px;
+}
+
+.fa-share {
+	position: fixed;
+	left: 60px;
+	bottom: 16px;
+	z-index: 1111;
+	cursor: pointer;
+	background-color: rgba(0,0,0,.9);
+	padding: 6px;
+	border-radius: 50%;
+	color: white;
+}
+
+
+@media screen and (max-width: 678px) {
+	p {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 678px) {
+	h1 {
+		font-size: 28px;
+	}
+}
+
+
+
+@import './scss/header';
+@import './scss/about';
+@import './scss/paralax';
+@import './scss/skills';
+@import './scss/education';
+@import './scss/slider';
+@import './scss/contact';
+@import './scss/footer';
+@import './scss/popUp';
+@import './scss/cursor';
+@import './scss/settings';
+@import './scss/loadLine';
+@import './scss/copypasteBtn';
+@import './scss/scrollArrow';
+@import './scss/scrollBarDefaultStyles';

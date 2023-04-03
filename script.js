@@ -332,15 +332,18 @@ document.body.addEventListener('click', (e) => {
 let popUp_overlay = document.querySelector('.popUp_overlay');
 
 window.addEventListener('DOMContentLoaded', () => {
-    setInterval( () => {
-        popUp_overlay.classList.add('show_popup')
-
-        if (localStorage.getItem('pop')) {
-            popUp_overlay.classList.remove('show_popup');
-        }
-
-    }, 10000)
+    // if (window.navigator.language[1] !== 'en') {
+        setInterval( () => {
+            popUp_overlay.classList.add('show_popup')
+    
+            if (localStorage.getItem('pop')) {
+                popUp_overlay.classList.remove('show_popup');
+            }
+    
+        }, 10000)
+    // }
 })
+
 
 
 
@@ -378,6 +381,28 @@ setInterval( () => {
     }
 
     img_slide.src = images[sliderCount];
-}, 8000)
+}, 8000);
+
+
+
+
+// ###### share page
+let share = document.querySelector('.fa-share');
+
+const shareData = {
+    title: "REDOX.R",
+    text: "CHECK IT OUT",
+    url: "https://reda-el.github.io/german/",
+  };
+
+share.addEventListener('click', async () => {
+    try {
+        await window.navigator.share(shareData)
+        // copyBtn.textContent = 'REDOX.R has been shared successfully';
+    }catch(err) {
+        copyBtn.classList.add('showCopyBtn');
+        copyBtn.textContent = 'Sharing failed'
+    }
+})
 
 
