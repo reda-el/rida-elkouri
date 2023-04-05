@@ -332,18 +332,19 @@ document.body.addEventListener('click', (e) => {
 let popUp_overlay = document.querySelector('.popUp_overlay');
 
 window.addEventListener('DOMContentLoaded', () => {
-    // if (window.navigator.language[1] !== 'en') {
+    if (window.navigator.language !== 'de-DE') {
         setInterval( () => {
-            popUp_overlay.classList.add('show_popup')
-    
+            popUp_overlay.classList.add('show_popup');
+            document.body.classList.add('hideBar')
+            
             if (localStorage.getItem('pop')) {
                 popUp_overlay.classList.remove('show_popup');
+                document.body.classList.remove('hideBar')
             }
     
         }, 10000)
-    // }
+    }
 })
-
 
 
 
@@ -351,7 +352,7 @@ window.addEventListener('DOMContentLoaded', () => {
 popUp_overlay.querySelector('.fa').onclick = () => {
     localStorage.setItem('pop', true);
     popUp_overlay.classList.remove('show_popup');
-    disablescroll()
+    document.body.classList.remove('hideBar')
 }
 
 
@@ -360,6 +361,7 @@ document.body.onclick = function(e) {
     if (e.target.className === 'popUp_overlay show_popup') {
         popUp_overlay.classList.remove('show_popup')
         localStorage.setItem('pop', true);
+        document.body.classList.remove('hideBar')
     }
 }
 
@@ -406,3 +408,18 @@ share.addEventListener('click', async () => {
 })
 
 
+
+
+
+// We get the initial value when the promise resolves ...
+navigator.getBattery().then(function(battery) {
+    if (battery.level < 0.20) {
+        alert(`You Battery level is  ${battery.level.toString().slice(2)}%. Make sure to charge it`);
+    }
+  });
+
+  
+
+//   navigator.serviceWorker.register('script.js').then( (re) => {
+//     console.log(re)
+//   })

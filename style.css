@@ -8,6 +8,9 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #f2f2f2;
 }
+body.hideBar {
+  overflow: hidden;
+}
 
 :root {
   --main-color: #0075ff;
@@ -22,7 +25,7 @@ p {
   position: fixed;
   left: 60px;
   bottom: 16px;
-  z-index: 1111;
+  z-index: 111;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.9);
   padding: 6px;
@@ -459,40 +462,20 @@ p {
   line-height: 30px;
   margin-top: 10px;
 }
-.paralax .paralax-overlay button {
-  padding: 0 20px;
-  height: 40px;
-  margin-top: 20px;
-  color: white;
-  border: 1px solid white;
-  cursor: pointer;
-  outline: none;
-  border-radius: 2px;
-  font-size: 17px;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.paralax .paralax-overlay button a {
-  overflow: hidden;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0;
-  height: 100%;
+.paralax .paralax-overlay a {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 7px 20px;
   background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: width 0.2s ease-in;
   color: white;
   text-decoration: none;
+  margin-top: 10px;
+  border-radius: 2px;
+  outline: 1px solid #fff;
 }
-.paralax .paralax-overlay button:hover {
-  border: 2px solid #ffffff;
-  color: transparent;
-}
-.paralax .paralax-overlay button:hover a {
-  width: 100%;
+.paralax .paralax-overlay a:hover {
+  outline: 2px solid #fff;
 }
 
 @media only screen and (max-width: 668px) {
@@ -944,7 +927,7 @@ p {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 24px;
   border: 1px solid #4f4f4f;
 }
 .contact .sections-wrapper form .field input[type=submit]:hover {
@@ -1005,37 +988,33 @@ footer p i {
   position: fixed;
   width: 100%;
   height: 100vh;
-  left: 0;
-  top: -50%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
-  transform: scale(0);
   opacity: 0;
   transition: all 0.5s ease-in;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   box-shadow: -15px 17px 17px rgba(0, 0, 0, 0.1);
+  display: none;
 }
 .popUp_overlay.show_popup {
-  transform: scale(1);
   opacity: 1;
-  top: 0;
+  display: block;
 }
 .popUp_overlay .message {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 300px;
+  height: 130px;
   position: absolute;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: -15px 17px 17px rgba(0, 0, 0, 0.1);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  right: 20px;
+  bottom: 20px;
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 40px;
+  padding: 30px;
   border-radius: 10px;
 }
-.popUp_overlay .message h2 {
+.popUp_overlay .message p {
   color: rgb(87, 87, 87);
   text-align: center;
 }
@@ -1051,37 +1030,20 @@ footer p i {
   outline: none;
   letter-spacing: 2px;
   border-radius: 2px;
+  font-size: 12px;
 }
 .popUp_overlay .message .fa:hover {
   background-color: rgb(160, 160, 160);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
   .popUp_overlay .message {
-    padding: 36px;
-    width: 96%;
+    width: 98%;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
   }
 }
-@media only screen and (max-width: 568px) {
-  .popUp_overlay .message h2 {
-    font-size: 20px;
-  }
-}
-.cursor {
-  position: fixed;
-  width: 30px;
-  height: 30px;
-  background-color: var(--main-color);
-  border-radius: 50%;
-  display: none;
-  transition: all 0.4s ease;
-  z-index: 11111;
-}
-.cursor.style {
-  width: 50px;
-  height: 50px;
-}
-
 .settings-button {
   position: fixed;
   bottom: 10px;
@@ -1293,11 +1255,11 @@ html {
 }
 
 html::-webkit-scrollbar {
-  width: 10px;
+  width: 14px;
 }
 
 html::-webkit-scrollbar-thumb {
-  border-radius: 4px;
+  border-radius: 6px;
   background: var(--main-color);
 }
 

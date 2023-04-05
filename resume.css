@@ -224,11 +224,11 @@ html {
 }
 
 html::-webkit-scrollbar {
-  width: 10px;
+  width: 14px;
 }
 
 html::-webkit-scrollbar-thumb {
-  border-radius: 4px;
+  border-radius: 6px;
   background: var(--main-color);
 }
 
@@ -694,7 +694,7 @@ header a i {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 24px;
   border: 1px solid #4f4f4f;
 }
 .contact .sections-wrapper form .field input[type=submit]:hover {
