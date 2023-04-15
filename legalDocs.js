@@ -116,3 +116,19 @@ document.body.addEventListener('click', (e) => {
 })
 
 
+// ###### share page
+let share = document.querySelector('.fa-share');
+
+const shareData = {
+    title: "REDOX.R",
+    text: "CHECK IT OUT",
+    url: "https://reda-el.github.io/german/legaldocs.html",
+  };
+
+share.addEventListener('click', async () => {
+    try {
+        await window.navigator.share(shareData)
+    }catch(err) {
+        copyBtn.classList.add('showCopyBtn');
+    }
+})

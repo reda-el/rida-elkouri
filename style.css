@@ -14,6 +14,7 @@ body.hideBar {
 
 :root {
   --main-color: #0075ff;
+  --hover_padding: 1px;
 }
 
 p {
@@ -57,7 +58,7 @@ p {
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(23, 26, 28, 0.86);
+  background-color: rgba(23, 26, 28, 0.78);
 }
 .header .overlay-wrapper img {
   width: 100%;
@@ -67,7 +68,7 @@ p {
 }
 .header header {
   width: 100%;
-  height: 60px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -79,9 +80,9 @@ p {
 .header header.header-scroll-down-style {
   position: fixed;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.87);
+  background-color: white;
   transition: all 1s ease-out;
-  border-bottom: 1px solid gray;
+  box-shadow: 0 2px 10px 2px #c5c5c5;
 }
 .header header a {
   text-decoration: none;
@@ -92,6 +93,9 @@ p {
 }
 .header header a h2 span {
   color: var(--main-color);
+}
+.header header a h2.active {
+  color: rgb(68, 68, 68);
 }
 .header header ul li {
   list-style: none;
@@ -104,8 +108,11 @@ p {
   border-radius: 4px;
 }
 .header header ul li a.active {
-  background-color: #fff;
-  color: var(--main-color);
+  background-color: var(--main-color);
+  color: white !important;
+}
+.header header ul li a.activee {
+  color: black;
 }
 .header header ul li i {
   display: none;
@@ -223,11 +230,12 @@ p {
     top: 0;
     width: 300px;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgb(253, 253, 253);
     z-index: 11;
     transition: all 0.3s ease-in;
     opacity: 0;
     transform: scale(0.8);
+    box-shadow: -2px 0px 3px 2px #e1e1e1;
   }
   .header header ul.show-nav-bar {
     right: 0;
@@ -241,20 +249,22 @@ p {
   }
   .header header ul li a {
     text-decoration: none;
-    color: #ffffff;
     padding: 6px;
+    color: black;
   }
   .header header ul li a:hover {
-    color: rgb(117, 117, 117);
+    color: rgb(68, 68, 68);
   }
   .header header ul .legalDocs {
     margin: 20px 0 0 20px;
   }
-  .header header ul i {
+  .header header ul .fa-times {
     position: absolute;
-    right: 22px;
-    top: 12px;
+    right: 10px;
+    top: 6px;
     font-size: 30px;
+    background-color: transparent;
+    color: black;
   }
   .header header i {
     display: block;
@@ -517,12 +527,11 @@ p {
 }
 .skills-and-langauges .skills-wrapper .dev-langs .langs .level {
   width: 100%;
-  height: 16px;
+  height: 12px;
   border-radius: 4px;
   border: 1px solid rgb(134, 134, 134);
   position: relative;
   margin-top: 4px;
-  transition: all 1s ease;
 }
 .skills-and-langauges .skills-wrapper .dev-langs .langs .level span {
   position: absolute;
@@ -530,6 +539,20 @@ p {
   top: 0;
   height: 100%;
   background-color: var(--main-color);
+}
+.skills-and-langauges .skills-wrapper .dev-langs .langs .level .levele_level {
+  position: absolute;
+  left: 0;
+  top: -4px;
+  width: 34px;
+  height: 20px;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 10px;
+  font-size: 10px;
+  text-align: center;
+  line-height: 20px;
+  transition: all 1s ease;
 }
 .skills-and-langauges .skills-wrapper .languages {
   width: 40%;
@@ -564,7 +587,6 @@ p {
   left: 50%;
   top: 40%;
   transform: translate(-50%, -50%);
-  z-index: 11;
   font-weight: bold;
   font-size: 20px;
   color: #6e6e6e;
@@ -628,10 +650,10 @@ p {
   height: auto;
   margin-top: 40px;
   padding: 60px 30px 30px 30px;
-  background: linear-gradient(153.76deg, #000000 1.97%, #565656 94.97%);
+  background-color: white;
 }
 .education h1 {
-  color: rgb(255, 255, 255);
+  color: rgb(73, 73, 73);
 }
 .education .education-wrapper {
   width: 100%;
@@ -643,23 +665,24 @@ p {
 }
 .education .education-wrapper .phase {
   width: 100%;
-  background-color: #1c1c1c;
+  background-image: linear-gradient(to right, #fff, #f9f9f9);
   border-radius: 4px;
-  border: 1px solid #646464;
+  border: 1px solid #cacaca;
   transition: all 0.3s ease;
 }
 .education .education-wrapper .phase p {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .education .education-wrapper .phase:hover {
-  border: 1px solid #7e7e7e;
-  box-shadow: -3px -3px 7px rgba(87, 87, 87, 0.6980392157), 3px 3px 5px rgba(89, 89, 89, 0.945);
+  border: 1px solid #c1c1c1;
+  box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.6980392157), 3px 5px 5px rgba(212, 212, 212, 0.945);
   transform: translateY(-3px);
 }
 .education .education-wrapper .phase .year {
   text-align: center;
   padding: 10px;
   font-size: 17px;
+  font-weight: bold;
 }
 .education .education-wrapper .phase .info {
   width: 100%;
@@ -668,12 +691,12 @@ p {
   width: 100%;
   text-align: center;
   font-size: 100px;
-  color: white;
+  color: rgb(58, 58, 58);
 }
 .education .education-wrapper .phase .info p {
   padding: 30px;
   text-align: center;
-  color: #bebebe;
+  color: #4a4a4a;
 }
 .education .education-wrapper .phase .info .btns {
   width: 100%;
@@ -710,10 +733,10 @@ p {
   color: white;
 }
 .education .education-wrapper .phase .info .btns .view-diploma {
-  background-color: transparent;
+  background-color: white;
 }
 .education .education-wrapper .phase .info .btns .view-diploma a {
-  color: rgb(255, 255, 255);
+  color: rgb(83, 83, 83);
   text-decoration: none;
 }
 
@@ -870,10 +893,10 @@ p {
   height: auto;
   margin-top: 80px;
   padding: 60px 30px 20px 30px;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: white;
 }
 .contact h1 {
-  color: rgb(255, 255, 255);
+  color: rgb(80, 80, 80);
 }
 .contact .sections-wrapper {
   width: 100%;
@@ -882,19 +905,18 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   margin-top: 20px;
-  opacity: 0.88;
 }
 .contact .sections-wrapper form {
   width: 100%;
-  background-color: rgba(68, 68, 68, 0.6);
   padding: 10px;
   border-radius: 4px;
+  background-color: #f2f2f2;
 }
 .contact .sections-wrapper form .field {
   margin-top: 20px;
 }
 .contact .sections-wrapper form .field label {
-  color: rgb(242, 242, 242);
+  color: rgb(57, 57, 57);
   letter-spacing: 1px;
 }
 .contact .sections-wrapper form .field input {
@@ -969,7 +991,9 @@ footer {
   align-items: center;
   margin-top: 30px;
   padding: 0 10px;
-  background-color: black;
+  background-color: rgb(43, 43, 43);
+  display: flex;
+  justify-content: center;
 }
 footer h2 {
   color: rgb(221, 221, 221);
@@ -1038,8 +1062,8 @@ footer p i {
 
 @media only screen and (max-width: 500px) {
   .popUp_overlay .message {
-    width: 98%;
-    bottom: 4px;
+    width: 99%;
+    bottom: 40px;
     left: 4px;
     right: 4px;
   }
@@ -1255,7 +1279,7 @@ html {
 }
 
 html::-webkit-scrollbar {
-  width: 14px;
+  width: 12px;
 }
 
 html::-webkit-scrollbar-thumb {

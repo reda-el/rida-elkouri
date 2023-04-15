@@ -130,22 +130,40 @@ window.addEventListener('scroll', () => {
 
 // ######### header-scroll-down-style
 let header = document.querySelector('header');
+let headerh2 = document.querySelector('header h2');
+let nva_link = document.querySelectorAll('.links a');
+
 window.addEventListener('scroll', () => {
     if (window.scrollY > 500) {
-        header.classList.add('header-scroll-down-style')
+        header.classList.add('header-scroll-down-style');
+        headerh2.classList.add('active');
+        nva_link.forEach((ele) => {
+            ele.classList.add('activee');
+        })
     } else {
         header.classList.remove('header-scroll-down-style')
+        headerh2.classList.remove('active');
+        nva_link.forEach((ele) => {
+            ele.classList.remove('activee');
+        })
     }
 })
 
 
 // ############ dev langs animation
 let levels = document.querySelectorAll('.level span');
+let levele_level = document.querySelectorAll('.levele_level');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > document.querySelector('.skills-and-langauges').offsetTop) {
         levels.forEach((ele) => {
             ele.style.width = ele.dataset.langlevel
+        })
+
+        levele_level.forEach( (ele) => {
+            ele.style.left = ele.dataset.spanlanglevel - 1 + '%';
+            ele.textContent = ele.dataset.spanlanglevel + '%';
+    
         })
     }
 })
@@ -400,26 +418,10 @@ const shareData = {
 share.addEventListener('click', async () => {
     try {
         await window.navigator.share(shareData)
-        // copyBtn.textContent = 'REDOX.R has been shared successfully';
     }catch(err) {
         copyBtn.classList.add('showCopyBtn');
-        copyBtn.textContent = 'Sharing failed'
     }
 })
 
 
 
-
-
-// We get the initial value when the promise resolves ...
-navigator.getBattery().then(function(battery) {
-    if (battery.level < 0.20) {
-        alert(`You Battery level is  ${battery.level.toString().slice(2)}%. Make sure to charge it`);
-    }
-  });
-
-  
-
-//   navigator.serviceWorker.register('script.js').then( (re) => {
-//     console.log(re)
-//   })
