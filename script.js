@@ -419,7 +419,7 @@ share.addEventListener('click', async () => {
     try {
         await window.navigator.share(shareData)
     }catch(err) {
-        copyBtn.classList.add('showCopyBtn');
+        console.log(err)
     }
 })
 
