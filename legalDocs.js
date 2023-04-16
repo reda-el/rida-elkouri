@@ -17,10 +17,18 @@ setInterval(() => {
 
 
 // ####### show settings
+let settings_overlay = document.querySelector('.settings-overlay') 
 let settings_button = document.querySelector('.settings-button');
 let settings = document.querySelector('.settings');
+
 settings_button.addEventListener('click', () => {
-    settings.classList.toggle('show-settings')
+    settings_overlay.classList.toggle('show-settings')
+});
+
+settings_overlay.addEventListener('click', (e) => {
+    if (e.target.className === 'settings-overlay show-settings') {
+        settings_overlay.classList.remove('show-settings');
+    }
 })
 
 
@@ -104,16 +112,6 @@ if (localStorage.getItem('current-color')) {
     document.querySelector('#' + localStorage.getItem('current-color')).style.outline = '3px solid #3c3c3c';
 }
 
-
-
-
-// Hide color theme settings of click outside
-document.body.addEventListener('click', (e) => {
-    let tar = e.target
-    if (!tar.classList.contains('settings-button') && !tar.classList.contains('color') && !tar.classList.contains('settings') && !tar.classList.contains('fa-settings') && !tar.classList.contains('select')) {
-        settings.classList.remove('show-settings')
-    }
-})
 
 
 // ###### share page
