@@ -26,7 +26,7 @@ p {
   position: fixed;
   left: 60px;
   bottom: 16px;
-  z-index: 111;
+  z-index: 2;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.9);
   padding: 6px;
