@@ -142,6 +142,7 @@ p {
   background-color: rgba(31, 31, 31, 0.8);
   padding: 4px 6px;
   border-radius: 2px;
+  border: 1px solid gray;
 }
 .header .intro {
   width: 100%;
@@ -258,6 +259,7 @@ p {
     font-size: 30px;
     background-color: transparent;
     color: black;
+    border: none;
   }
   .header header i {
     display: block;
@@ -712,7 +714,7 @@ p {
   outline: none;
   cursor: pointer;
   border-radius: 4px;
-  border: 1px solid #c4c4c4;
+  border: 1px solid #d7d7d7;
 }
 .education .education-wrapper .phase .info .btns button:hover {
   border: 1px solid #b5b5b5;
@@ -733,7 +735,7 @@ p {
   background-color: white;
 }
 .education .education-wrapper .phase .info .btns .view-diploma a {
-  color: rgb(83, 83, 83);
+  color: rgb(80, 80, 80);
   text-decoration: none;
 }
 
