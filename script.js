@@ -4,7 +4,6 @@ let fa_times = document.querySelector('.fa-times');
 let links = document.querySelector('.links');
 bar.addEventListener('click', () => {
     links.classList.toggle('show-nav-bar');
-    bar.classList.toggle('bar-click-style');
 });
 
 // hide bnav if click outside
@@ -18,7 +17,6 @@ document.body.addEventListener('click', (e) => {
 
 fa_times.addEventListener('click', () => {
     links.classList.remove('show-nav-bar');
-    bar.classList.remove('bar-click-style');
 });
 
 // ####### load_line
@@ -161,7 +159,7 @@ window.addEventListener('scroll', () => {
         })
 
         levele_level.forEach( (ele) => {
-            ele.style.left = ele.dataset.spanlanglevel - 1 + '%';
+            ele.style.left = ele.dataset.spanlanglevel - 4 + '%';
             ele.textContent = ele.dataset.spanlanglevel + '%';
     
         })
