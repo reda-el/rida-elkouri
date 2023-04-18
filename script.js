@@ -132,7 +132,7 @@ let headerh2 = document.querySelector('header h2');
 let nva_link = document.querySelectorAll('.links a');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
+    if (window.scrollY > 200) {
         header.classList.add('header-scroll-down-style');
         headerh2.classList.add('active');
         nva_link.forEach((ele) => {
@@ -153,13 +153,13 @@ let levels = document.querySelectorAll('.level span');
 let levele_level = document.querySelectorAll('.levele_level');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > document.querySelector('.skills-and-langauges').offsetTop) {
+    if (window.scrollY > document.querySelector('.skills-and-langauges').offsetTop - 50) {
         levels.forEach((ele) => {
             ele.style.width = ele.dataset.langlevel
         })
 
         levele_level.forEach( (ele) => {
-            ele.style.left = ele.dataset.spanlanglevel - 4 + '%';
+            ele.style.left = ele.dataset.spanlanglevel - 4.5 + '%';
             ele.textContent = ele.dataset.spanlanglevel + '%';
     
         })
@@ -173,7 +173,7 @@ let rotationStarted = false;
 
 var count = 0;
 window.addEventListener('scroll', () => {
-    if (window.scrollY >= document.querySelector('.languages').offsetTop - 210) {
+    if (window.scrollY >= document.querySelector('.languages').offsetTop - 260) {
 
         language.forEach((ele) => {
             let rotateDegree = ele.dataset.rotation
@@ -238,7 +238,6 @@ slideBtns.forEach((btn, indx) => {
 // ############## validating the contact form
 let form = document.querySelector('form');
 let submitBtn = document.querySelector('.submitBtn');
-
 let name_input = document.getElementById('name')
 let subject = document.getElementById('subject')
 let mail = document.getElementById('mail')
@@ -250,7 +249,7 @@ let validation_output = document.querySelector('.validation_output');
 form.onsubmit = (ev) => {
     if (name_input.value === '' || subject.value === '' || mail.value === '' || message.value === '') {
         ev.preventDefault();
-        validation_output.textContent = 'make sure to fill all the fields'
+        validation_output.textContent = 'make sure to fill all the fields';
     }
 }
 
@@ -260,12 +259,12 @@ let copyBtn = document.querySelector('.copyBtn');
 
 document.documentElement.addEventListener('copy', () => {
     copyBtn.classList.add('showCopyBtn');
-    copyBtn.textContent = 'Text copied!'
+    copyBtn.textContent = 'Text copied!';
 });
 
 document.documentElement.addEventListener('paste', () => {
     copyBtn.classList.add('showCopyBtn');
-    copyBtn.textContent = 'Text pasted!'
+    copyBtn.textContent = 'Text pasted!';
 });
 
 setInterval(() => {
@@ -290,8 +289,6 @@ settings_overlay.addEventListener('click', (e) => {
     }
 })
 
-
-
 // ad color pick manually
 let navigation_btn_active = document.querySelector('.navigation .active');
 let colorInput = document.getElementById('colorInput');
@@ -301,8 +298,7 @@ colorInput.addEventListener('input', () => {
     divs.style.setProperty('--main-color', localStorage.getItem('theme-color'))
 })
 
-colorInput.value = localStorage.getItem('theme-color')
-
+colorInput.value = localStorage.getItem('theme-color');
 
 // ########### set the page theme on click
 let divs = document.querySelector(':root');
@@ -424,3 +420,12 @@ share.addEventListener('click', async () => {
 
 
 
+
+
+let aboutImage = document.querySelector('.about img');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY >= aboutImage.offsetTop - 400) {
+        aboutImage.classList.add('show-image-animation')
+    }
+})

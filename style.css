@@ -187,7 +187,6 @@ p {
   cursor: pointer;
   background-color: transparent;
   background-color: rgba(0, 0, 0, 0.2);
-  pointer-events: none;
 }
 .header .intro .info button:hover {
   background-color: rgba(0, 0, 0, 0.5);
@@ -334,6 +333,10 @@ p {
   border: 10px solid #eee;
   box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.6980392157), 3px 3px 5px rgba(192, 196, 202, 0.945);
   pointer-events: none;
+  transition: all 0.5s ease-in;
+}
+.about .about-wrapper .about-img-wrapper img.show-image-animation {
+  animation: animate-image-shadow 2s ease-in;
 }
 .about .about-wrapper .about-info {
   width: 70%;
@@ -406,6 +409,17 @@ p {
   border: 1px solid var(--main-color);
 }
 
+@keyframes animate-image-shadow {
+  0% {
+    box-shadow: 0 0 0 white;
+  }
+  50% {
+    box-shadow: 0px 0px 800px 200px #d2d2d2;
+  }
+  100% {
+    box-shadow: 0 0 0 white;
+  }
+}
 @media only screen and (max-width: 768px) {
   .about {
     width: 100%;
@@ -655,6 +669,34 @@ p {
 .education h1 {
   color: rgb(73, 73, 73);
 }
+.education .education-time-line {
+  position: relative;
+}
+.education .education-time-line img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.education .education-time-line .highschool-line {
+  position: absolute;
+  left: 24%;
+  top: 10px;
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  transform: rotate(90deg);
+  border-radius: 2px;
+}
+.education .education-time-line .uni-line {
+  position: absolute;
+  left: 74%;
+  top: 10px;
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  transform: rotate(90deg);
+  border-radius: 2px;
+}
 .education .education-wrapper {
   width: 100%;
   display: grid;
@@ -743,6 +785,9 @@ p {
 @media only screen and (max-width: 768px) {
   .education {
     height: auto;
+  }
+  .education .education-time-line {
+    display: none;
   }
   .education .education-wrapper {
     grid-template-columns: 1fr;
@@ -1108,7 +1153,7 @@ footer p i {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(39, 39, 39, 0.3);
+  background-color: rgba(39, 39, 39, 0.6);
   transition: all 0.5s ease-in;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -1131,7 +1176,6 @@ footer p i {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  box-shadow: -3px -3px 7px rgba(87, 87, 87, 0.6980392157), 3px 3px 5px rgba(89, 89, 89, 0.945);
   padding: 4px;
   display: flex;
   opacity: 1;
@@ -1186,7 +1230,7 @@ footer p i {
 @media only screen and (max-width: 768px) {
   .settings-overlay .settings {
     left: 30px;
-    width: 90px;
+    width: 66px;
     height: -moz-fit-content;
     height: fit-content;
     border-radius: 5px;

@@ -44,7 +44,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(39, 39, 39, 0.3);
+  background-color: rgba(39, 39, 39, 0.6);
   transition: all 0.5s ease-in;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -67,7 +67,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  box-shadow: -3px -3px 7px rgba(87, 87, 87, 0.6980392157), 3px 3px 5px rgba(89, 89, 89, 0.945);
   padding: 4px;
   display: flex;
   opacity: 1;
@@ -122,7 +121,7 @@ body {
 @media only screen and (max-width: 768px) {
   .settings-overlay .settings {
     left: 30px;
-    width: 90px;
+    width: 66px;
     height: -moz-fit-content;
     height: fit-content;
     border-radius: 5px;
@@ -288,7 +287,6 @@ header a i {
   padding: 80px 0 0 30px;
   color: rgb(78, 78, 78);
   font-style: italic;
-  pointer-events: none;
 }
 .indicator a {
   text-decoration: none;
@@ -304,7 +302,6 @@ header a i {
   font-size: 20px;
   color: var(--main-color);
   cursor: pointer;
-  pointer-events: none;
 }
 
 .docs-wrraper {
