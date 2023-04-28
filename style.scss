@@ -29,7 +29,7 @@ p {
 	bottom: 16px;
 	z-index: 2;
 	cursor: pointer;
-	background-color: rgba(0,0,0,.9);
+	background-color: var(--main-color);
 	padding: 6px;
 	border-radius: 50%;
 	color: white;

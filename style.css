@@ -28,7 +28,7 @@ p {
   bottom: 16px;
   z-index: 2;
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--main-color);
   padding: 6px;
   border-radius: 50%;
   color: white;
@@ -90,12 +90,17 @@ p {
 .header header a h2 {
   color: white;
   font-size: 36px;
+  background: linear-gradient(to right, #fff, #cdcdcd, var(--main-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .header header a h2 span {
   color: var(--main-color);
 }
 .header header a h2.active {
-  color: rgb(68, 68, 68);
+  background: linear-gradient(to right, rgb(58, 58, 58), #7e7e7e, var(--main-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .header header ul li {
   list-style: none;
@@ -110,7 +115,7 @@ p {
   border-bottom: 4px solid var(--main-color);
 }
 .header header ul li a.activee {
-  color: black;
+  color: rgb(58, 58, 58);
 }
 .header header ul li i {
   display: none;
@@ -330,8 +335,7 @@ p {
      object-fit: cover;
   border-radius: 50%;
   padding: 0 10px;
-  border: 10px solid #eee;
-  box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.6980392157), 3px 3px 5px rgba(192, 196, 202, 0.945);
+  border: 10px solid #e4e4e4;
   pointer-events: none;
   transition: all 0.5s ease-in;
 }
@@ -414,7 +418,7 @@ p {
     box-shadow: 0 0 0 white;
   }
   50% {
-    box-shadow: 0px 0px 800px 200px #d2d2d2;
+    box-shadow: 0px 0px 800px 200px #b0b0b0;
   }
   100% {
     box-shadow: 0 0 0 white;
@@ -610,7 +614,7 @@ p {
   left: 50%;
   top: 60%;
   transform: translate(-50%, -50%);
-  font-size: 20px;
+  font-size: 18px;
   color: #3f3f3f;
 }
 .skills-and-langauges .skills-wrapper .languages .lang a {
@@ -1230,7 +1234,7 @@ footer p i {
 @media only screen and (max-width: 768px) {
   .settings-overlay .settings {
     left: 30px;
-    width: 66px;
+    width: 86px;
     height: -moz-fit-content;
     height: fit-content;
     border-radius: 5px;
