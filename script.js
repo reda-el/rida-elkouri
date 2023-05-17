@@ -188,7 +188,7 @@ window.addEventListener('scroll', () => {
                         clearInterval(intervall)
                     }
                     h6.textContent = count 
-                }, 60)    
+                }, 40)    
             }
         })
         rotationStarted = true
@@ -429,3 +429,36 @@ window.addEventListener('scroll', () => {
         aboutImage.classList.add('show-image-animation')
     }
 })
+
+
+
+
+// ############ dev langs animation
+let aboutImageAnimation = document.querySelector('.about-img-wrapper img');
+
+let rotationStartedForImage = false;
+
+var count = 0;
+window.addEventListener('scroll', () => {
+    if (window.scrollY >= document.querySelector('.languages').offsetTop - 260) {
+
+        language.forEach((ele) => {
+            let rotateDegree = ele.dataset.rotation
+
+            let h6 = ele.querySelector('.level')
+            
+            if (!rotationStarted) {
+                let intervall = setInterval(() => {
+                    ele.style.setProperty('--rotation', `${count++}%`);
+        
+                    if (rotateDegree <= count) {
+                        clearInterval(intervall)
+                    }
+                    h6.textContent = count 
+                }, 60)    
+            }
+        })
+        rotationStarted = true
+    }
+})
+

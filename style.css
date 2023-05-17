@@ -6,7 +6,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #f2f2f2;
 }
 body.hideBar {
   overflow: hidden;
@@ -15,6 +14,8 @@ body.hideBar {
 :root {
   --main-color: #0075ff;
   --hover_padding: 1px;
+  --heading-color: #051F4E;
+  --paragraph-gray-color: #434A50;
 }
 
 p {
@@ -32,6 +33,7 @@ p {
   padding: 6px;
   border-radius: 50%;
   color: white;
+  outline: 1px solid rgb(227, 227, 227);
 }
 
 @media screen and (max-width: 678px) {
@@ -109,13 +111,14 @@ p {
 .header header ul li a {
   text-decoration: none;
   color: white;
-  padding: 10px 7px;
+  padding: 10px 2px;
+  margin: 0 4px;
 }
 .header header ul li a.active {
   border-bottom: 4px solid var(--main-color);
 }
 .header header ul li a.activee {
-  color: rgb(58, 58, 58);
+  color: var(--paragraph-gray-color);
 }
 .header header ul li i {
   display: none;
@@ -191,7 +194,6 @@ p {
   margin-top: 20px;
   cursor: pointer;
   background-color: transparent;
-  background-color: rgba(0, 0, 0, 0.2);
 }
 .header .intro .info button:hover {
   background-color: rgba(0, 0, 0, 0.5);
@@ -249,13 +251,14 @@ p {
   .header header ul li a {
     text-decoration: none;
     padding: 6px;
-    color: black;
+    color: var(--paragraph-gray-color);
   }
   .header header ul li a:hover {
-    color: rgb(68, 68, 68);
+    color: black;
   }
   .header header ul .legalDocs {
     margin: 20px 0 0 20px;
+    box-shadow: 0 3px 10px #878787;
   }
   .header header ul .fa-times {
     position: absolute;
@@ -263,7 +266,7 @@ p {
     top: 6px;
     font-size: 30px;
     background-color: transparent;
-    color: black;
+    color: rgb(79, 79, 79);
     border: none;
   }
   .header header i {
@@ -295,6 +298,10 @@ p {
   }
   .header header ul {
     width: 100%;
+    background-image: url(Untitled.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .header .intro {
     top: 60%;
@@ -310,20 +317,24 @@ p {
 .about {
   width: 100%;
   height: auto;
-  padding: 60px 30px 0 30px;
+  padding: 60px 30px 30px 30px;
+  background-color: white;
 }
 .about h1 {
-  color: rgb(41, 41, 41);
+  color: var(--heading-color);
+}
+.about p {
+  color: var(--paragraph-gray-color);
 }
 .about .about-wrapper {
   width: 100%;
   margin-top: 20px;
-  background: linear-gradient(153.76deg, #ffffff 1.97%, #d7d7d7 94.97%);
+  background-image: linear-gradient(130deg, rgb(255, 255, 255) 0%, var(--main-color) 800%);
   border-radius: 20px;
   display: flex;
   align-items: center;
-  gap: 30px;
   padding: 30px;
+  border: 1px solid rgb(238, 239, 251);
 }
 .about .about-wrapper .about-img-wrapper {
   width: 30%;
@@ -406,6 +417,9 @@ p {
 .about .about-wrapper .about-info .personal-info .my-info button.intro-download-btn:hover {
   opacity: 0.9;
 }
+.about .about-wrapper .about-info .personal-info .my-info button.intro-view-btn {
+  border: 1px solid rgb(214, 214, 214);
+}
 .about .about-wrapper .about-info .personal-info .my-info button.intro-view-btn:hover i {
   transform: translate(6px, -6px);
 }
@@ -463,7 +477,6 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 40px;
   position: relative;
 }
 .paralax .paralax-overlay {
@@ -516,16 +529,20 @@ p {
   padding: 60px 30px 0 30px;
 }
 .skills-and-langauges h1 {
-  color: rgb(41, 41, 41);
+  color: var(--heading-color);
 }
 .skills-and-langauges p {
-  color: #5c5c5c;
+  color: var(--paragraph-gray-color);
 }
 .skills-and-langauges .skills-wrapper {
   width: 100%;
   height: auto;
   display: flex;
   gap: 20px;
+  background-image: linear-gradient(150deg, rgb(255, 255, 255) 0%, var(--main-color) 800%);
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 .skills-and-langauges .skills-wrapper .dev-langs {
   width: 60%;
@@ -533,13 +550,13 @@ p {
   margin-top: 30px;
 }
 .skills-and-langauges .skills-wrapper .dev-langs h2 {
-  color: #3f3f3f;
+  color: var(--paragraph-gray-color);
 }
 .skills-and-langauges .skills-wrapper .dev-langs .langs {
   margin-top: 20px;
 }
 .skills-and-langauges .skills-wrapper .dev-langs .langs p {
-  color: rgb(61, 61, 61);
+  color: var(--paragraph-gray-color);
   font-weight: 600;
 }
 .skills-and-langauges .skills-wrapper .dev-langs .langs .level {
@@ -570,7 +587,7 @@ p {
   font-size: 10px;
   text-align: center;
   line-height: 20px;
-  transition: all 1s ease;
+  transition: all 0.6s ease;
 }
 .skills-and-langauges .skills-wrapper .languages {
   width: 40%;
@@ -607,7 +624,7 @@ p {
   transform: translate(-50%, -50%);
   font-weight: bold;
   font-size: 20px;
-  color: #6e6e6e;
+  color: #6c6c6c;
 }
 .skills-and-langauges .skills-wrapper .languages .lang h6 {
   position: absolute;
@@ -615,7 +632,7 @@ p {
   top: 60%;
   transform: translate(-50%, -50%);
   font-size: 18px;
-  color: #3f3f3f;
+  color: var(--paragraph-gray-color);
 }
 .skills-and-langauges .skills-wrapper .languages .lang a {
   width: 100%;
@@ -671,7 +688,10 @@ p {
   background-color: white;
 }
 .education h1 {
-  color: rgb(73, 73, 73);
+  color: var(--heading-color);
+}
+.education p {
+  color: var(--paragraph-gray-color);
 }
 .education .education-time-line {
   position: relative;
@@ -711,18 +731,19 @@ p {
 }
 .education .education-wrapper .phase {
   width: 100%;
-  background-image: linear-gradient(to right, #fff, #f9f9f9);
+  background-image: linear-gradient(to right, rgb(255, 255, 255), var(--main-color) 1500%);
   border-radius: 4px;
-  border: 1px solid #cacaca;
+  border: 1px solid rgb(234, 237, 255);
   transition: all 0.3s ease;
+  box-shadow: 2px 8px 10px rgba(107, 107, 107, 0.1);
 }
 .education .education-wrapper .phase p {
   color: rgb(0, 0, 0);
 }
 .education .education-wrapper .phase:hover {
-  border: 1px solid #c1c1c1;
-  box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.6980392157), 3px 5px 5px rgba(212, 212, 212, 0.945);
   transform: translateY(-3px);
+  border: 1px solid #c0c0c0;
+  background-image: linear-gradient(140deg, rgb(255, 255, 255), var(--main-color) 800%);
 }
 .education .education-wrapper .phase .year {
   text-align: center;
@@ -824,9 +845,14 @@ p {
   width: 100%;
   padding: 60px 30px 20px 30px;
   margin-top: 20px;
+  background-image: linear-gradient(180deg, rgb(255, 255, 255), var(--main-color) 1500%);
 }
 .silder-container h1 {
-  color: rgb(41, 41, 41);
+  color: var(--heading-color);
+  text-align: center;
+}
+.silder-container p {
+  color: var(--paragraph-gray-color);
   text-align: center;
 }
 .silder-container .slider {
@@ -897,6 +923,7 @@ p {
   width: 70%;
   margin-top: 20px;
   line-height: 28px;
+  text-align: left;
 }
 .silder-container .slider .slider-wrapper .navigation {
   position: absolute;
@@ -946,7 +973,7 @@ p {
   background-color: white;
 }
 .contact h1 {
-  color: rgb(80, 80, 80);
+  color: var(--heading-color);
 }
 .contact .sections-wrapper {
   width: 100%;
@@ -960,7 +987,8 @@ p {
   width: 100%;
   padding: 10px;
   border-radius: 4px;
-  background-color: #f2f2f2;
+  background-image: radial-gradient(white, var(--main-color) 800%);
+  border: 1px solid #c6c6c6;
 }
 .contact .sections-wrapper form .field {
   margin-top: 20px;
@@ -1004,7 +1032,7 @@ p {
   font-weight: bold;
   cursor: pointer;
   font-size: 24px;
-  border: 1px solid #4f4f4f;
+  border: 1px solid #9b9b9b;
 }
 .contact .sections-wrapper form .field input[type=submit]:hover {
   outline: 1px solid var(--main-color);
@@ -1017,6 +1045,9 @@ p {
 .contact .sections-wrapper form .validation_output {
   color: rgb(255, 27, 27);
   margin-top: 10px;
+}
+.contact .sections-wrapper form a {
+  color: #6a6a6a;
 }
 .contact .sections-wrapper iframe {
   width: 100%;
@@ -1044,25 +1075,27 @@ p {
 }
 footer {
   width: 100%;
-  height: 80px;
+  height: 200px;
+  margin-top: 70px;
+  padding: 0 10px;
   display: flex;
   align-items: center;
-  margin-top: 30px;
-  padding: 0 10px;
-  background-color: rgb(43, 43, 43);
-  display: flex;
   justify-content: center;
+  background-image: url(wavesvg.svg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 footer h2 {
-  color: rgb(221, 221, 221);
+  color: rgb(255, 255, 255);
 }
 footer p {
-  color: white;
+  color: rgb(236, 236, 236);
   padding-left: 60px;
   font-size: 16px;
 }
 footer p i {
-  color: var(--main-color);
+  color: red;
   padding-right: 4px;
 }
 
@@ -1138,6 +1171,7 @@ footer p i {
   padding: 10px;
   border-radius: 50%;
   animation: spin-settings-icon 6s infinite linear;
+  outline: 1px solid rgb(227, 227, 227);
 }
 .settings-button:hover {
   opacity: 0.9;
@@ -1339,12 +1373,12 @@ html {
 }
 
 html::-webkit-scrollbar {
-  width: 12px;
+  width: 14px;
 }
 
 html::-webkit-scrollbar-thumb {
   border-radius: 6px;
-  background: var(--main-color);
+  background: rgb(76, 76, 76);
 }
 
 html::-webkit-scrollbar-track {

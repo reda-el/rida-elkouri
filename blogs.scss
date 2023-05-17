@@ -93,6 +93,9 @@ header {
 
     h1 {
         color: rgb(53, 53, 53);
+        background: linear-gradient(to right, rgb(58, 58, 58), #7e7e7e, var(--main-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .bolgs {
