@@ -347,7 +347,7 @@ p {
   border-radius: 50%;
   padding: 6px;
   border: 5px solid white;
-  outline: 2px solid rgb(207, 207, 207);
+  outline: 2px solid var(--main-color);
   pointer-events: none;
   transition: all 0.5s ease-in;
 }
