@@ -17,6 +17,7 @@ body {
 @import 'scss/copypasteBtn';
 @import 'scss/scrollArrow';
 @import 'scss/scrollBarDefaultStyles';
+@import './scss/follow';
 
 
 p {
@@ -179,6 +180,7 @@ section {
 
     .text {
         width: 100%;
+        
         p {
             line-height: 30px;
             word-spacing: 2px;

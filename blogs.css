@@ -24,6 +24,7 @@ body {
   padding: 10px;
   border-radius: 50%;
   animation: spin-settings-icon 6s infinite linear;
+  outline: 1px solid white;
 }
 .settings-button:hover {
   opacity: 0.9;
@@ -211,33 +212,45 @@ body {
   background-color: var(--main-color);
   color: white;
   z-index: 3;
-  padding: 9px 10px;
+  padding: 8px 10px;
   cursor: pointer;
-  transition: right 0.4s ease-in;
+  transition: all 0.2s ease-in;
+  outline: 1px solid white;
+  border-radius: 50%;
 }
 .scroll_up_arrow.scroll_up_arrow_show {
   right: 14px;
 }
 .scroll_up_arrow:hover {
-  outline: 1px solid var(--main-color);
-  opacity: 0.9;
+  margin-bottom: 5px;
 }
 
-html {
-  scroll-behavior: smooth;
+.follow-us {
+  padding: 100px 30px 30px 30px;
+  text-align: center;
 }
-
-html::-webkit-scrollbar {
-  width: 14px;
+.follow-us p {
+  font-weight: 600;
 }
-
-html::-webkit-scrollbar-thumb {
+.follow-us .icons {
+  margin-top: 40px;
+}
+.follow-us .icons a {
+  text-decoration: none;
+}
+.follow-us .icons a i {
+  font-size: 28px;
+  margin: 0 16px;
+  color: rgb(255, 255, 255);
+  padding: 10px;
   border-radius: 4px;
-  background: rgb(76, 76, 76);
+  transition: all 0.3s ease;
+  background-color: #282A35;
 }
-
-html::-webkit-scrollbar-track {
-  background: #ebfbff;
+.follow-us .icons a i:hover {
+  background-image: linear-gradient(to right, rgb(0, 0, 0));
+  background-color: var(--main-color);
+  color: white;
 }
 
 p {
@@ -457,6 +470,7 @@ section .img img {
   padding: 10px;
   border-radius: 50%;
   animation: spin-settings-icon 6s infinite linear;
+  outline: 1px solid white;
 }
 .settings-button:hover {
   opacity: 0.9;
@@ -584,19 +598,23 @@ section .img img {
 
 footer {
   width: 100%;
-  height: 100px;
-  margin-top: 70px;
+  height: 140px;
+  margin-top: 100px;
   padding: 0 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 -4px 10px 4px #eee;
+  background-color: #ffffff;
+  background-image: url(Vector\ 1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 footer h2 {
-  color: rgb(73, 73, 73);
+  color: rgb(236, 236, 236);
 }
 footer p {
-  color: rgb(44, 44, 44);
+  color: rgb(236, 236, 236);
   padding-left: 60px;
   font-size: 16px;
 }
@@ -617,6 +635,7 @@ footer p i {
   padding: 10px;
   border-radius: 50%;
   animation: spin-settings-icon 6s infinite linear;
+  outline: 1px solid white;
 }
 .settings-button:hover {
   opacity: 0.9;
@@ -804,14 +823,15 @@ footer p i {
   background-color: var(--main-color);
   color: white;
   z-index: 3;
-  padding: 9px 10px;
+  padding: 8px 10px;
   cursor: pointer;
-  transition: right 0.4s ease-in;
+  transition: all 0.2s ease-in;
+  outline: 1px solid white;
+  border-radius: 50%;
 }
 .scroll_up_arrow.scroll_up_arrow_show {
   right: 14px;
 }
 .scroll_up_arrow:hover {
-  outline: 1px solid var(--main-color);
-  opacity: 0.9;
+  margin-bottom: 5px;
 }/*# sourceMappingURL=blogs.css.map */

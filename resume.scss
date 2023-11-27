@@ -12,7 +12,7 @@
     outline: none;
     color: white;
     font-weight: bold;
-    border-radius: 3px;
+    border-radius: 20px;
     text-transform: capitalize;
     font-family: 'Itim', cursive;
     font-size: 19px;
@@ -32,6 +32,7 @@ body {
 @import 'scss/copypasteBtn';
 @import 'scss/scrollArrow';
 @import 'scss/scrollBarDefaultStyles';
+@import './scss/follow';
 
 p {
 	font-family: 'Inter', sans-serif;
@@ -121,13 +122,13 @@ header {
     width: 100%;
     height: auto;
     padding: 30px;
-
+    
     .cv-h2-wrapper {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        
         h1 {
             color: #36393d;
         }
@@ -144,12 +145,12 @@ header {
                 border-radius: 4px;
                 background-color: var(--main-color);
                 cursor: pointer;
-
+                
                 &:hover {
-					outline: 1px solid var(--main-color);
+                    outline: 1px solid var(--main-color);
                     opacity: 0.9;
 				}
-
+                
                 &:hover i {
                     transform: translateY(6px);
                 }
@@ -161,7 +162,7 @@ header {
             }
         }
     }
-
+    
     .resume {
         width: 100%;
         margin-top: 30px;
@@ -170,7 +171,8 @@ header {
         background-color: white;
         position: relative;
         background-image: linear-gradient(130deg, rgb(255, 255, 255), var(--main-color) 1200%);
-
+        border: 1px solid #cecece;
+        
 
         &::before {
             content: '';

@@ -48,6 +48,18 @@ window.addEventListener('scroll', () => {
     }
 })
 
+let overlay_wrapper = document.querySelector('.overlay-wrapper')
+let overlay = document.querySelector('.overlay')
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 140) {
+        overlay_wrapper.style.borderBottomLeftRadius = '0'
+        overlay.style.borderBottomLeftRadius = '0'
+    } else {
+        overlay_wrapper.style.borderBottomLeftRadius = '240px'
+        overlay.style.borderBottomLeftRadius = '240px'
+    }
+})
+
 
 // Hide bar is we scroll up or down
 window.addEventListener('wheel', (e) => {
@@ -108,22 +120,13 @@ window.addEventListener('scroll', () => {
     } else {
         document.querySelector('.link4').classList.remove('active');
     }
-
-    if (window.scrollY >= document.querySelector('#contact').offsetTop) {
-        headerLinks.forEach((link) => {
-            link.classList.remove('active');
-        })
-        document.querySelector('.link6').classList.add('active');
-    } else {
-        document.querySelector('.link6').classList.remove('active');
-    }
 })
 
 
 // ############ paralx
 let paralax = document.querySelector('.paralax');
 window.addEventListener('scroll', () => {
-    paralax.style.backgroundPositionY = window.pageYOffset * 0.05 + 'px'
+    paralax.style.backgroundPositionY = window.pageYOffset * 0.04 + 'px'
 })
 
 // ######### header-scroll-down-style
@@ -132,7 +135,7 @@ let headerh2 = document.querySelector('header h2');
 let nva_link = document.querySelectorAll('.links a');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 550) {
         header.classList.add('header-scroll-down-style');
         headerh2.classList.add('active');
         nva_link.forEach((ele) => {
@@ -153,7 +156,7 @@ let levels = document.querySelectorAll('.level span');
 let levele_level = document.querySelectorAll('.levele_level');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > document.querySelector('.skills-and-langauges').offsetTop - 50) {
+    if (window.scrollY > document.querySelector('.skills-and-langauges').offsetTop) {
         levels.forEach((ele) => {
             ele.style.width = ele.dataset.langlevel
         })
@@ -173,7 +176,7 @@ let rotationStarted = false;
 
 var count = 0;
 window.addEventListener('scroll', () => {
-    if (window.scrollY >= document.querySelector('.languages').offsetTop - 260) {
+    if (window.scrollY >= document.querySelector('.languages').offsetTop ) {
 
         language.forEach((ele) => {
             let rotateDegree = ele.dataset.rotation
@@ -236,22 +239,22 @@ slideBtns.forEach((btn, indx) => {
 
 
 // ############## validating the contact form
-let form = document.querySelector('form');
-let submitBtn = document.querySelector('.submitBtn');
-let name_input = document.getElementById('name')
-let subject = document.getElementById('subject')
-let mail = document.getElementById('mail')
-let message = document.getElementById('message')
-let validation_output = document.querySelector('.validation_output');
+// let form = document.querySelector('form');
+// let submitBtn = document.querySelector('.submitBtn');
+// let name_input = document.getElementById('name')
+// let subject = document.getElementById('subject')
+// let mail = document.getElementById('mail')
+// let message = document.getElementById('message')
+// let validation_output = document.querySelector('.validation_output');
 
 
 
-form.onsubmit = (ev) => {
-    if (name_input.value === '' || subject.value === '' || mail.value === '' || message.value === '') {
-        ev.preventDefault();
-        validation_output.textContent = 'make sure to fill all the fields';
-    }
-}
+// form.onsubmit = (ev) => {
+//     if (name_input.value === '' || subject.value === '' || mail.value === '' || message.value === '') {
+//         ev.preventDefault();
+//         validation_output.textContent = 'make sure to fill all the fields';
+//     }
+// }
 
 
 // ############ show copy btn
@@ -369,14 +372,7 @@ popUp_overlay.querySelector('.fa').onclick = () => {
 }
 
 
-// hide popup if click outside
-document.body.onclick = function(e) {
-    if (e.target.className === 'popUp_overlay show_popup') {
-        popUp_overlay.classList.remove('show_popup')
-        localStorage.setItem('pop', true);
-        document.body.classList.remove('hideBar')
-    }
-}
+
 
 
 // Setting background slider
