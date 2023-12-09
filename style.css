@@ -1035,66 +1035,6 @@ footer p i {
   padding-right: 4px;
 }
 
-.popUp_overlay {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  opacity: 0;
-  transition: all 0.5s ease-in;
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-  box-shadow: -15px 17px 17px rgba(0, 0, 0, 0.2);
-  display: none;
-}
-.popUp_overlay.show_popup {
-  opacity: 1;
-  display: block;
-}
-.popUp_overlay .message {
-  width: 300px;
-  height: 130px;
-  position: absolute;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: -15px 17px 17px rgba(0, 0, 0, 0.1);
-  right: 20px;
-  bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 30px;
-  border-radius: 10px;
-}
-.popUp_overlay .message p {
-  color: rgb(87, 87, 87);
-  text-align: center;
-}
-.popUp_overlay .message .fa {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  background-color: rgb(188, 188, 188);
-  padding: 6px;
-  border: none;
-  outline: none;
-  letter-spacing: 2px;
-  border-radius: 2px;
-  font-size: 12px;
-}
-.popUp_overlay .message .fa:hover {
-  background-color: rgb(160, 160, 160);
-}
-
-@media only screen and (max-width: 500px) {
-  .popUp_overlay .message {
-    width: 99%;
-    bottom: 40px;
-    left: 4px;
-    right: 4px;
-  }
-}
 .settings-button {
   position: fixed;
   bottom: 10px;

@@ -43,6 +43,9 @@ body {
 .motivation .text p {
   margin-top: 20px;
 }
+.motivation .text p:not(p:nth-child(1)) {
+  color: #4a4949;
+}
 .motivation .text .signature {
   margin-top: 30px;
   font-family: Georgia, "Times New Roman", Times, serif;

@@ -51,6 +51,9 @@ body {
 
         p {
             margin-top: 20px;
+            &:not(p:nth-child(1)) {
+                color: #4a4949;
+            }
         }
 
         .signature {

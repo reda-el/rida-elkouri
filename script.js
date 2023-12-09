@@ -345,31 +345,31 @@ document.body.addEventListener('click', (e) => {
 
 
 // ########## hide pop up
-let popUp_overlay = document.querySelector('.popUp_overlay');
+// let popUp_overlay = document.querySelector('.popUp_overlay');
 
-window.addEventListener('DOMContentLoaded', () => {
-    if (window.navigator.language !== 'de-DE') {
-        setInterval( () => {
-            popUp_overlay.classList.add('show_popup');
-            document.body.classList.add('hideBar')
+// window.addEventListener('DOMContentLoaded', () => {
+//     if (window.navigator.language !== 'de-DE') {
+//         setInterval( () => {
+//             popUp_overlay.classList.add('show_popup');
+//             document.body.classList.add('hideBar')
             
-            if (localStorage.getItem('pop')) {
-                popUp_overlay.classList.remove('show_popup');
-                document.body.classList.remove('hideBar')
-            }
+//             if (localStorage.getItem('pop')) {
+//                 popUp_overlay.classList.remove('show_popup');
+//                 document.body.classList.remove('hideBar')
+//             }
     
-        }, 10000)
-    }
-})
+//         }, 10000)
+//     }
+// })
 
 
 
 
-popUp_overlay.querySelector('.fa').onclick = () => {
-    localStorage.setItem('pop', true);
-    popUp_overlay.classList.remove('show_popup');
-    document.body.classList.remove('hideBar')
-}
+// popUp_overlay.querySelector('.fa').onclick = () => {
+//     localStorage.setItem('pop', true);
+//     popUp_overlay.classList.remove('show_popup');
+//     document.body.classList.remove('hideBar')
+// }
 
 
 
