@@ -120,7 +120,7 @@ let share = document.querySelector('.fa-share');
 const shareData = {
     title: "REDOX.R",
     text: "CHECK IT OUT",
-    url: "https://reda-el.github.io/german/resume.html",
+    url: "https://reda-el.github.io/rida-elkouri/resume.html",
   };
 
 share.addEventListener('click', async () => {

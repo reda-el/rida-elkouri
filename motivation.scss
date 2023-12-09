@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0%;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+.Anschreiben {
+    margin: 20px;
+}
+
+.motivation {
+    section {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        margin: 0 20px;
+        background-image: linear-gradient(to right, #EFEFEF, #E1FFFD);
+        border-radius: 6px 6px 0 0;
+
+        .left {
+            
+            p {
+                margin-top: 10px;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .text {
+        padding: 20px;
+        margin: 0 20px;
+        line-height: 28px;
+        background-color: #fafafa;
+
+        .job {
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .greeting {
+            margin-top: 20px;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        .signature {
+            margin-top: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+    }
+} 

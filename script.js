@@ -112,14 +112,14 @@ window.addEventListener('scroll', () => {
         document.querySelector('.link3').classList.remove('active');
     }
 
-    if (window.scrollY >= document.querySelector('#slider').offsetTop) {
-        headerLinks.forEach((link) => {
-            link.classList.remove('active');
-        })
-        document.querySelector('.link4').classList.add('active');
-    } else {
-        document.querySelector('.link4').classList.remove('active');
-    }
+    // if (window.scrollY >= document.querySelector('#slider').offsetTop) {
+    //     headerLinks.forEach((link) => {
+    //         link.classList.remove('active');
+    //     })
+    //     document.querySelector('.link4').classList.add('active');
+    // } else {
+    //     document.querySelector('.link4').classList.remove('active');
+    // }
 })
 
 
@@ -403,7 +403,7 @@ let share = document.querySelector('.fa-share');
 const shareData = {
     title: "REDOX.R",
     text: "CHECK IT OUT",
-    url: "https://reda-el.github.io/german/",
+    url: "https://reda-el.github.io/rida-elkouri/",
   };
 
 share.addEventListener('click', async () => {
